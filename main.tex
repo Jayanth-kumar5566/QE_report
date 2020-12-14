@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper]{report}
 
 \usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2cm]{geometry}
 % graphics images
@@ -80,9 +80,26 @@
 \newpage
 \input{1.Introduction.tex}
 \newpage
-\input{2.Methods.tex}
+\chapter{Title1}
+\input{./Chapter1/1.Introduction.tex}
+\input{./Chapter1/2.Methods.tex}
+\input{./Chapter1/3.Results.tex}
+\input{./Chapter1/4.Discussion.tex}
+\input{./Chapter1/5.Future-works.tex}
 \newpage
-\input{3.Results.tex}
+\chapter{Title2}
+\input{./Chapter2/1.Introduction.tex}
+\input{./Chapter2/2.Methods.tex}
+\input{./Chapter2/3.Results.tex}
+\input{./Chapter2/4.Discussion.tex}
+\input{./Chapter2/5.Future-works.tex}
+\newpage
+\chapter{Title3}
+\input{./Chapter3/1.Introduction.tex}
+\input{./Chapter3/2.Methods.tex}
+\input{./Chapter3/3.Results.tex}
+\input{./Chapter3/4.Discussion.tex}
+\input{./Chapter3/5.Future-works.tex}
 \newpage
 \input{4.Discussion.tex}
 \newpage
