@@ -834,17 +834,6 @@ url="https://doi.org/10.1186/gb-2011-12-6-r60"
   publisher = {Wiley Online Library},
 }
 
-@Article{Dang2019,
-  author    = {Dang, Anh Thu and Marsland, Benjamin J},
-  journal   = {Mucosal Immunology},
-  title     = {Microbes, metabolites, and the gut--lung axis},
-  year      = {2019},
-  number    = {4},
-  pages     = {843--850},
-  volume    = {12},
-  publisher = {Nature Publishing Group},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:
