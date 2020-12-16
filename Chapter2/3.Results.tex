@@ -1,84 +1,21 @@
 \section{Results}
 
+\subsection{Significant overlap of fungal communities of lung and gut contrary to bacteria}
 
-\subsection {Math Cheat Sheet}
-\begin{figure}
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}
-            \addplot[color=red]{exp(x)};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Plot of Exponential Function.}
-    \label{fig:func1} % label must follow caption
-\end{center}
+Intersection analysis of bacterial and fungal communities between sputum and stool samples reveals increased overlap of fungal communities between the lung and gut, contrary to bacteria. Three bacterial genera including \emph{Lactobacillus, Prevotella} and \emph{Streptococcus} compared to six fungal genera including \emph{Candida, Cryptococcus, Curvularia, Debaryomyces, Lodderomyces} and \emph{Saccharomyces} were present in both sputum and stool samples. Interestingly, upon assessment of diversity between the sputum and stool samples, a similar pattern is observed. Overall, mycobiome exhibits a decreased diversity compared to microbiome. Further, an increased diversity of bacteria is found in the gut compared to the lung whereas the fungal diversity doesn't change. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{image/diversity.png}
+	\caption{A boxplot illustrating the difference in Shannon-diversity index of the Microbiome (Ochre) and Mycobiome (Blue) between the sputum (Lung) and stool (Gut) samples. Statistical significance of these differences were calculated using `wilcoxon test' and are indicated above as p-values.}
+	\label{res2_fig1}
 \end{figure}
 
+\subsection{Co-occurrence analysis reveals lung – gut microbial (bacteria and fungi) interactions suggestive of a potential lung-gut axis.}
 
 
-\hskip 5pt
+MOFA2 analysis reveals factors, highly contributed by the Gut bacteria and associated with exacerbations. 
 
-\begin{figure}
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}
-            \addplot3[
-                surf,
-            ]
-            {exp(-x^2-y^2)*x};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Plot of 3-D Function.}
-    \label{fig:func2}
-\end{center}
-\end{figure}
+Integrating microbiomes (bacteria and fungi) from lung and the gut, following clustering identifies patients with increased risk of exacerbation, Reiff score and FACED with no difference in lung function. 
 
-\begin{figure} [h!] 
-    \centering
-        \begin{tikzpicture}
-        \centering
-        \begin{axis}[
-            axis lines = left,
-            xlabel = $x$,
-            ylabel = {$f(x)$},
-        ]
-        %Below the red parabola is defined
-        \addplot [
-            domain=-1:1, 
-            samples=100, 
-            color=red,
-        ]
-        {e^x};
-        \addlegendentry{$e^x$}
-        %Here the blue parabola is defined
-        \addplot [
-            domain=-1:1, 
-            samples=100, 
-            color=blue,
-            ]
-            {1/x^2}; % note that the syntax here is different
-        \addlegendentry{$\frac{1}{x^2}$}
-        \end{axis}
-        \end{tikzpicture}
-        \caption{Two functions in one plot.}
-        \label{fig:func3}
-\end{figure}
-
-\autoref{fig:func1}, \autoref{fig:func2}, and \autoref{fig:func3} are generated from function in \LaTeX. 
-
-
-\subsection{Table Cheat Sheet}
-
-\begin{table}[h]
-    \centering
-    \begin{tabular}{c|ccc}
-        & Apple & Oranges & Strawberries \\
-    \hline
-    A & 1 & 2 & 3\\
-    B & 1 & 2 & 3\\
-    C & 1 & 2 & 3\\
-    D & 1 & 2 & 3\\
-    \end{tabular}
-    \caption{Caption}
-    \label{tab:my_label}
-\end{table}
+High-risk patients exhibit significantly increased \emph{Candia} in Gut, \emph{Fusobacterium} in Lung, increased lung-gut microbial interaction (35\%>29\%) and movement of Streptococcus between lung and gut, illustrating a dysregulated lung-gut axis.
