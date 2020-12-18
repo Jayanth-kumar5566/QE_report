@@ -12,10 +12,45 @@ Intersection analysis of bacterial and fungal communities between sputum and sto
 \end{figure}
 
 \subsection{Co-occurrence analysis reveals lung – gut microbial (bacteria and fungi) interactions suggestive of a potential lung-gut axis.}
+Assessment of interactions of microbes (bacteria and fungi) between the lung and gut was construed using co-occurrence analysis. Co-occurrence analysis was performed using two methods 1)GBLM: captures complex linear interactions and 2) Spiec-easi: captures non-linear interactions but assumes sparsity, to derive microbial association networks. Microbial associations networks from both these methods shows cross-talk between the microbes of the lung and the gut, indicative of potential existence of the lung-gut axis [Figure\ref{res2_fig2}]. However, a greater number of inter-axis interactions is observed through the use of GBLM methods as compared to spiec-easi and this is partially due to the assumption of sparsity by spiec-easi. Integrative assessment of the microbiomes was performed using MOFA2. Roughly, MOFA2 works like a PCA to create factors which maximises the explained variance of the integrated microbiome. MOFA2 analysis on the microbiomes (bacteria lung, bacteria gut, fungi lung and fungi gut) reveals a factor (Factor1) associated with exacerbations and Non-tuberculosis mycobacterial(NTM) infections [Figure\ref{res2_fig3}(c,d)]. Following, assessment of Factor1 in terms of contribution from individual microbiomes reveal gut microbiome as the highest contributor [Figure\ref{res2_fig3}(b)], possibly explainable by lung-gut axis which further supplements the existence of lung-gut axis. Moreover, upon assessment of the loadings of Factor1 we find four of the six overlapping microbes including \emph{Streptococcus, Saccharomyces, Candida} and \emph{Curvularia} have loadings $\geq 0.5\%$.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{image/ch2-gblm-all.png} 
+	\includegraphics[width=0.6\textwidth]{image/ch2-se-all.png}
+	\caption{Microbial association networks derived using co-occurrence analysis methods 1) GBLM(top) and 2)Spiec-easi(bottom). Nodes represents microbes including bacteria and fungi from both lung(left) and gut(right). Edges illustrate the association/interactions between the microbes derived using the respective methods. Highlighted red circle represents the interactions between the lung and gut microbiome.}
+	\label{res2_fig2}
+\end{figure}
 
-MOFA2 analysis reveals factors, highly contributed by the Gut bacteria and associated with exacerbations. 
+\begin{figure}[h]
+	\centering
+	\subfloat[]{\includegraphics[width=0.4\textwidth]{image/ch2_bar_varex.png}}
+	\subfloat[]{\includegraphics[width=0.4\textwidth]{image/ch2_heatmap_varex.png}}\\
+	\subfloat[]{\includegraphics[width=0.4\textwidth]{image/ch2_mofa_exac.png}}
+	\subfloat[]{\includegraphics[width=0.4\textwidth]{image/ch2_mofa_NTM.png}}
+	\caption{Integrative microbiome data analysis using MOFA2: (a) A bar chart representing the cumulative variance explained by each of the individual integrated biomes. (b) A heat-map illustrating the breakdown for variance explained of the individual biomes across the first three factors. Box plots illustrating the factor values of factors 1,2 and 3 across exacerbation category (c) and NTM\_ever groups (d).`*' illustrate the statistical significance of kruskal-wallis test in terms p-values; `*' p-value $<$ 0.05, `**' p-value $<$ 0.001,`***' p-value $<$ 0.0001}
+	\label{res2_fig3}
+\end{figure}
 
-Integrating microbiomes (bacteria and fungi) from lung and the gut, following clustering identifies patients with increased risk of exacerbation, Reiff score and FACED with no difference in lung function. 
+\subsection{Integrated microbiomes identifies a 'high-risk' patient cluster}
+Integration of microbiomes and mycobiomes from lung and gut using weighted SNF with k=9 was performed, following which spectral clustering was implemented to cluster the patients into two groups. Li \emph{et.al.} in their paper showed that integrating multiple views of the same patient/sample increases the power and compensates for smaller sample sizes\cite{Li2018}. Hence, clustering of the integrated microbiomes of these (n=57) patients is admissible. Cluster robustness was evaluated using a bootstrap approach and was found to be 79.15\%. Evaluation of the derived clusters across clinical attributes reveals patients belonging to cluster1 have a higher median risk of exacerbation, FACED score and Reiff score [Figure\ref{res2_fig4}] compared to cluster2. Differential analysis illustrates significantly increased \emph{Candia} in Gut and \emph{Fusobacterium} in Lung, of high-risk patients (cluster1) compared to that of low-risk patients(cluster2).
 
-High-risk patients exhibit significantly increased \emph{Candia} in Gut, \emph{Fusobacterium} in Lung, increased lung-gut microbial interaction (35\%>29\%) and movement of Streptococcus between lung and gut, illustrating a dysregulated lung-gut axis.
+\begin{figure}[h]
+	\centering
+	\subfloat[]{\includegraphics[width=0.3\textwidth]{image/Exacerbation_previous_year_sputum.png}}
+	\subfloat[]{\includegraphics[width=0.3\textwidth]{image/FACED.png}}
+	\subfloat[]{\includegraphics[width=0.3\textwidth]{image/Reiff_score.png}}
+	\caption{Boxplots illustrating the differences in Exacerbation (a), FACED (b) and Reiff score (c) between high-risk cluster 1(yellow) and low-risk cluster 2(blue). Statistical significance of these differences were calculated using ‘wilcoxon test’ and are indicated above as p-values.}
+	\label{res2_fig4}
+\end{figure}
+
+\subsection{Dysregulated lung-gut axis in high-risk patients}
+Having shown the existence of lung-gut axis and identifying a sub-group of high-risk bronchiectasis patients using the integrative microbiomics. We next evaluated the changes in lung-gut axis across the two clusters. Microbes between the lung and gut can broadly interact in two ways: 1) Microbes can travel between the sites through mechanisms such as micro-aspiration and 2) Microbes can secrete secondary metabolites and other biomolecules through which they can interact. To assess the first mechanism, a linear correlation analysis between the clr transformed abundance of the overlapping microbes from the lung and gut was performed. \emph{Lactobacillus} lung was found to be significantly correlated with  \emph{Lactobacillus} gut in high-risk cluster 1 but not in cluster 2. However, the observed correlation of \emph{Lactobacillus} between the two sites may be due to confounding microbes. Therefore, a GBLM analysis was performed to assess the association of overlapping microbes between the two sites given all the other microbes. Interestingly, the correlation between \emph{Lactobacillus} lung and \emph{Lactobacillus} gut disappears. However, a new association between \emph{Streptococcus} lung and \emph{Streptococcus} gut is found in high-risk cluster 1 but not in low-risk patients; suggestive of movement of \emph{Streptococcus} between lung and gut in high-risk patients (probably due to dysregulation of the axis) [Figure\ref{res2_fig5}(a)]. Assessment of the second mechanism was performed by evaluating the inter-axis microbial interactions between clusters. This reveals an increased lung-gut microbial interaction in high-risk cluster(35\%) compared to low-risk cluster(29\%) [Figure\ref{res2_fig5}(b)]; further supplementing the dysregulation of this axis in high-risk patients.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{\includegraphics[width=\textwidth]{image/ch2_gblm_strep.png}}\\
+	\subfloat[]{\includegraphics[width=\textwidth]{image/ch2_gblm_clusters.png}}
+	\caption{Microbial co-occurrence network across the clusters, derived using GBLM with nodes as microbes (bacteria and fungi) from both lung and gut, and edges representing the significant (p-value$<$0.0001) interaction between nodes. (a) Overlapping microbes are highlighted as yellow nodes. (b) Inter lung-gut microbial interactions are highlighted as red edges.}
+	\label{res2_fig5}
+\end{figure}
