@@ -33,6 +33,7 @@
 \usepackage{wrapfig}
 \usepackage{multicol}
 \usepackage[section]{placeins}
+\usepackage{chronosys}
 
 %%%%%% OPTIONAL
 % latex table generator : http://tablesgenerator.com/
@@ -78,28 +79,27 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\input{1.Introduction.tex}
-\newpage
+%\input{1.Introduction.tex}
+%\newpage
 \chapter{``Integrative microbiomics" reveals a disrupted interactome in bronchiectasis exacerbations}
 \input{./Chapter1/1.Introduction.tex}
 \input{./Chapter1/2.Methods.tex}
 \input{./Chapter1/3.Results.tex}
 \input{./Chapter1/4.Discussion.tex}
-\input{./Chapter1/5.Future-works.tex}
 \newpage
 \chapter{Microbial dysregulation of the `lung-gut' axis in high-risk bronchiectasis}
 \input{./Chapter2/1.Introduction.tex}
 \input{./Chapter2/2.Methods.tex}
 \input{./Chapter2/3.Results.tex}
-\newpage
-\input{4.Discussion.tex}
-\newpage
-\input{5.Future-works.tex}
+\input{./Chapter2/4.Discussion.tex}
 
+\input{./5.Future-works.tex}
+\newpage
 \pagenumbering{arabic}
-
-\newpage
 \bibliographystyle{acm}
 \bibliography{reference}
 
+\chapter{Appendix}
+\input{publications.tex}
+\input{timeline.tex}
 \end{document}
