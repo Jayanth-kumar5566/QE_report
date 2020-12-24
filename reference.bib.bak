@@ -881,6 +881,54 @@ url="https://doi.org/10.1186/gb-2011-12-6-r60"
   publisher = {BioMed Central},
 }
 
+@Article{Fernandes2014,
+  author    = {Fernandes, Andrew D and Reid, Jennifer Ns and Macklaim, Jean M and McMurrough, Thomas A and Edgell, David R and Gloor, Gregory B},
+  journal   = {Microbiome},
+  title     = {Unifying the analysis of high-throughput sequencing datasets: characterizing RNA-seq, 16S rRNA gene sequencing and selective growth experiments by compositional data analysis},
+  year      = {2014},
+  number    = {1},
+  pages     = {15},
+  volume    = {2},
+  publisher = {Springer},
+}
+
+@Article{Ratnatunga2020,
+  author    = {Champa N. Ratnatunga and Viviana P. Lutzky and Andreas Kupz and Denise L. Doolan and David W. Reid and Matthew Field and Scott C. Bell and Rachel M. Thomson and John J. Miles},
+  journal   = {Frontiers in Immunology},
+  title     = {The Rise of Non-Tuberculosis Mycobacterial Lung Disease},
+  year      = {2020},
+  month     = {mar},
+  volume    = {11},
+  doi       = {10.3389/fimmu.2020.00303},
+  publisher = {Frontiers Media {SA}},
+}
+
+@Article{RosaCarrillo2018,
+  author    = {David de la Rosa Carrillo and Rodrigo Athanazio and Rosa Maria Gir{\'{o}}n Moreno and Luis M{\'{a}}iz Carro and Casilda Olveira and Javier de Gracia and Montserrat Vendrell and Concepci{\'{o}}n Prados S{\'{a}}nchez and Georgina Gramblicka and Monica Corso Pereira and Fernando Lundgren and Mara Fernandes De Figueiredo and Francisco Arancibia and Samia Rached and Miguel-Angel Mart{\'{\i}}nez-Garcia},
+  journal   = {{ERJ} Open Research},
+  title     = {The annual prognostic ability of {FACED} and E-{FACED} scores to predict mortality in patients with bronchiectasis},
+  year      = {2018},
+  month     = {jan},
+  number    = {1},
+  pages     = {00139--2017},
+  volume    = {4},
+  doi       = {10.1183/23120541.00139-2017},
+  publisher = {European Respiratory Society ({ERS})},
+}
+
+@Article{Reiff1995,
+  author    = {D B Reiff and A U Wells and D H Carr and P J Cole and D M Hansell},
+  journal   = {American Journal of Roentgenology},
+  title     = {{CT} findings in bronchiectasis: limited value in distinguishing between idiopathic and specific types.},
+  year      = {1995},
+  month     = {aug},
+  number    = {2},
+  pages     = {261--267},
+  volume    = {165},
+  doi       = {10.2214/ajr.165.2.7618537},
+  publisher = {American Roentgen Ray Society},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:
